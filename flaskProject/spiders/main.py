@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 import pandas as pd
 
 # 数据库连接对象
-engine = create_engine('mysql+pymysql://root:Zsj20021012!@118.89.116.89:3306/weiboarticles?charset=utf8mb4')
+engine = create_engine('mysql+pymysql://root:123123!@123123123:3306/weiboarticles?charset=utf8mb4')
 
 
 def save_to_sql():
