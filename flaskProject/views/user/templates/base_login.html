@@ -1,0 +1,84 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>{% block title %}
+      	Login
+      {% endblock %}</title>
+
+      <link rel="stylesheet" href="/static/css/backend-plugin.min.css">
+      <link rel="stylesheet" href="/static/css/backend.css">  </head>
+  <body class=" ">
+    <div id="loading">
+          <div id="loading-center">
+          </div>
+    </div>
+
+  <div class="wrapper">
+    <section class="login-content">
+         <div class="container h-100">
+            <div class="row align-items-center justify-content-center h-100">
+               <div class="col-md-5">
+                  <div class="card p-3">
+                     {% block content %}
+                     	<div class="card-body">
+                        <div class="auth-logo">
+                           <img src="https://sso.uic.edu.cn/auth/uploadFile/previewFile/6087778d9f130549df7399a7" class="img-fluid  rounded-normal  darkmode-logo" alt="logo">
+                           <img src="https://sso.uic.edu.cn/auth/uploadFile/previewFile/6087778d9f130549df7399a7" class="img-fluid rounded-normal light-logo" alt="logo">
+                        </div>
+                        <h3 class="text-center text-secondary mb-4">Weibo public opinion visualization analysis system</h3>
+                        <h4 class="mb-3 font-weight-bold text-center">Log In</h4>
+                         <p class="text-center text-secondary mb-4">- Flask echarts SnowNLP</p>
+                        <div class="mb-5">
+                            <p class="line-around text-secondary mb-0"><span class="line-around-1">Enter your username and password</span></p>
+                        </div>
+                        <form method="POST" action="/user/login">
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <div class="form-group">
+                                    <label class="text-secondary">Username</label>
+                                    <input class="form-control" name="username" type="text" placeholder="Enter Username">
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 mt-2">
+                                 <div class="form-group">
+                                     <div class="d-flex justify-content-between align-items-center">
+                                         <label class="text-secondary">Password</label>
+                                     </div>
+                                    <input class="form-control" name="password" type="password" placeholder="Enter Password">
+                                 </div>
+                              </div>
+                           </div>
+                           <button type="submit" class="btn btn-primary btn-block mt-2">Log In</button>
+                           <div class="col-lg-12 mt-3">
+                                <p class="mb-0 text-center">Don't have an account? <a href="/user/register">Sign Up</a></p>
+                           </div>
+                        </form>
+                     </div>
+                     {% endblock %}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      </div>
+
+    <script src="/static/js/backend-bundle.min.js"></script>
+    <script src="/static/js/customizer.js"></script>
+    <script src="/static/js/sidebar.js"></script>
+    <script src="/static/js/flex-tree.min.js"></script>
+    <script src="/static/js/tree.js"></script>
+    <script src="/static/js/table-treeview.js"></script>
+    <script src="/static/js/sweetalert.js"></script>
+    <script src="/static/js/vector-map-custom.js"></script>
+    <script src="/static/js/chart-custom.js"></script>
+    <script src="/static/js/01.js"></script>
+    <script src="/static/js/02.js"></script>
+    <script src="/static/js/slider.js"></script>
+    <script src="/static/js/index.js" type="module"></script>
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>

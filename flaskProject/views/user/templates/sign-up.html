@@ -1,0 +1,53 @@
+{% extends 'base_login.html' %}
+
+{% block title %}
+    Sign Up
+{% endblock %}
+
+{% block content %}
+    <div class="card-body">
+        <div class="auth-logo">
+            <img src="https://sso.uic.edu.cn/auth/uploadFile/previewFile/6087778d9f130549df7399a7"
+                 class="img-fluid  rounded-normal  darkmode-logo" alt="logo">
+            <img src="https://sso.uic.edu.cn/auth/uploadFile/previewFile/6087778d9f130549df7399a7"
+                 class="img-fluid rounded-normal light-logo" alt="logo">
+        </div>
+        <h3 class="text-center text-secondary mb-4">Weibo public opinion visualization analysis system</h3>
+        <h4 class="mb-3 font-weight-bold text-center">Sign Up</h4>
+        <p class="text-center text-secondary mb-4">- Flask echarts SnowNLP</p>
+        <div class="mb-5">
+            <p class="line-around text-secondary mb-0"><span
+                    class="line-around-1">Fill in the registration information</span></p>
+        </div>
+        <form method="post" action="/user/register">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label class="text-secondary">Username</label>
+                        <input class="form-control" name="username" type="text" placeholder="Enter Username">
+                    </div>
+                </div>
+                <div class="col-lg-12 mt-2">
+                    <div class="form-group">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <label class="text-secondary">Password</label>
+                        </div>
+                        <input class="form-control" name="password" type="password" placeholder="Enter Password">
+                    </div>
+                </div>
+                <div class="col-lg-12 mt-2">
+                    <div class="form-group">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <label class="text-secondary">Confirm Password</label>
+                        </div>
+                        <input class="form-control" name="checkPassword" type="password" placeholder="Confirm Your Password">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-2">Sign Up</button>
+            <div class="col-lg-12 mt-3">
+                <p class="mb-0 text-center">Already have an account? <a href="/user/login">Log In</a></p>
+            </div>
+        </form>
+    </div>
+{% endblock %}
